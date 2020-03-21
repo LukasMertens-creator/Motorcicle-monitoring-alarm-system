@@ -29,11 +29,17 @@ SPI | SPI.h | https://github.com/esp8266/Arduino
 ## Components
 
 Microcontroller | esp32 |![esp](https://user-images.githubusercontent.com/61006702/77225982-b6794280-6b74-11ea-89eb-ba2c3c65d996.jpg)
+
 Display | Oled | ![oled](https://user-images.githubusercontent.com/61006702/77226007-e6c0e100-6b74-11ea-9dff-47438e23a81a.jpg)
+
 Sensor | BMP280 | ![bmp280](https://user-images.githubusercontent.com/61006702/77226020-225bab00-6b75-11ea-9e40-b6a22e855fad.jpg)
+
 Sensor | MPU6050 | ![mpu6050](https://user-images.githubusercontent.com/61006702/77226033-461ef100-6b75-11ea-9bd4-dd8045d6a0cc.jpg)
+
 ADC | ADC1115 |![adc1115](https://user-images.githubusercontent.com/61006702/77226066-a57d0100-6b75-11ea-89c8-86cf84a6cb76.jpg)
+
 Sensor | KTY81 |![KTY81](https://user-images.githubusercontent.com/61006702/77226101-fab91280-6b75-11ea-9794-d01e3e729a7c.jpg)
+
 
 
 
