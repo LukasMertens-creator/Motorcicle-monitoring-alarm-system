@@ -10,5 +10,19 @@ These values are also tracked and plotted in the Blynk app.
 ### -ALARM SYSTEM-
 The alarm system can be monitored and controlled via the Blynk app. It has a gyro sensor that triggers the alarm if the moto moves while the alarm is on. When there is an alarm, the Blynk app sends a push message to notify you. You can see the location of the moto on a map in the app.
 
-## components
+## Libraries and Resources
+
+Title | Include | Link 
+------|---------|------
+Adafruit_SSD1306 | Adafruit_SSD1306.h | https://github.com/adafruit/Adafruit_SSD1306 
+Adafruit-GFX-Library | Adafruit_GFX.h | https://github.com/adafruit/Adafruit-GFX-Library 
+Adafruit-ADS1015 | Adafruit_ADS1015.h | 
+Adafruit-BMP280 | Adafruit_BMP280.h |
+Adafruit-Sensor | Adafruit_Sensor.h |
+Adafruit-MPU6050 | Adafruit_MPU6050.h |
+Blynk | BlynkSimpleEsp32.h |
+Wifi | WiFi.h |
+WifiClient | WiFiClient.h |
+Wire | Wire.h | https://github.com/esp8266/Arduino 
+SPI | SPI.h | https://github.com/esp8266/Arduino 
 
