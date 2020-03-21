@@ -26,3 +26,6 @@ WifiClient | WiFiClient.h | https://github.com/esp8266/Arduino/blob/master/libra
 Wire | Wire.h | https://github.com/esp8266/Arduino 
 SPI | SPI.h | https://github.com/esp8266/Arduino 
 
+## Components
+
+
