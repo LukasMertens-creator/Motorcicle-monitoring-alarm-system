@@ -28,8 +28,6 @@ SPI | SPI.h | https://github.com/esp8266/Arduino
 
 ## Components
 
- | type | picture 
-------|---------|------
 Microcontroller | esp32 |![esp](https://user-images.githubusercontent.com/61006702/77225982-b6794280-6b74-11ea-89eb-ba2c3c65d996.jpg)
 Display | Oled | ![oled](https://user-images.githubusercontent.com/61006702/77226007-e6c0e100-6b74-11ea-9dff-47438e23a81a.jpg)
 Sensor | BMP280 | ![bmp280](https://user-images.githubusercontent.com/61006702/77226020-225bab00-6b75-11ea-9e40-b6a22e855fad.jpg)
