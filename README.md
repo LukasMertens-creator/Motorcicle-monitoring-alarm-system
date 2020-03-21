@@ -16,13 +16,13 @@ Title | Include | Link
 ------|---------|------
 Adafruit_SSD1306 | Adafruit_SSD1306.h | https://github.com/adafruit/Adafruit_SSD1306 
 Adafruit-GFX-Library | Adafruit_GFX.h | https://github.com/adafruit/Adafruit-GFX-Library 
-Adafruit-ADS1015 | Adafruit_ADS1015.h | 
-Adafruit-BMP280 | Adafruit_BMP280.h |
-Adafruit-Sensor | Adafruit_Sensor.h |
-Adafruit-MPU6050 | Adafruit_MPU6050.h |
-Blynk | BlynkSimpleEsp32.h |
-Wifi | WiFi.h |
-WifiClient | WiFiClient.h |
+Adafruit-ADS1015 | Adafruit_ADS1015.h | https://github.com/adafruit/Adafruit_ADS1X15
+Adafruit-BMP280 | Adafruit_BMP280.h | https://github.com/adafruit/Adafruit_BMP280_Library
+Adafruit-Sensor | Adafruit_Sensor.h | https://github.com/adafruit/Adafruit_Sensor
+Adafruit-MPU6050 | Adafruit_MPU6050.h | https://github.com/adafruit/Adafruit_MPU6050
+Blynk | BlynkSimpleEsp32.h | https://github.com/blynkkk/blynk-library/blob/master/src/BlynkSimpleEsp32.h
+Wifi | WiFi.h | https://github.com/arduino-libraries/WiFi
+WifiClient | WiFiClient.h | https://github.com/esp8266/Arduino/blob/master/libraries/ESP8266WiFi/src/WiFiClient.h
 Wire | Wire.h | https://github.com/esp8266/Arduino 
 SPI | SPI.h | https://github.com/esp8266/Arduino 
 
