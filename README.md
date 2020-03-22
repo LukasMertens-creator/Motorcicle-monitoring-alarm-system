@@ -54,7 +54,7 @@ Sensor | KTY81 |![KTY81](https://user-images.githubusercontent.com/61006702/7722
 ---
 
 ## schematic
----
+
 ![schema motoalarm](https://user-images.githubusercontent.com/61006702/77251212-69b56a80-6c4d-11ea-93f9-a59be5d3f1ce.png)
 
 ---
