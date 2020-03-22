@@ -35,6 +35,7 @@ Wifi | WiFi.h | https://github.com/arduino-libraries/WiFi
 WifiClient | WiFiClient.h | https://github.com/esp8266/Arduino/blob/master/libraries/ESP8266WiFi/src/WiFiClient.h
 Wire | Wire.h | https://github.com/esp8266/Arduino 
 SPI | SPI.h | https://github.com/esp8266/Arduino 
+EasyBuzzer | EasyBuzzer.h | https://github.com/evert-arias/EasyBuzzer
 
 ## Components
 
