@@ -58,6 +58,12 @@ Sensor | KTY81 |![KTY81](https://user-images.githubusercontent.com/61006702/7722
 ![schema motoalarm](https://user-images.githubusercontent.com/61006702/77251212-69b56a80-6c4d-11ea-93f9-a59be5d3f1ce.png)
 
 ---
+## Breadboard photo
+
+![20200322_154613](https://user-images.githubusercontent.com/61006702/77252532-aa64b200-6c54-11ea-9f73-1e9f690c8f86.jpg)
+
+
+---
 
 # Code
 ```c++
