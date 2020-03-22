@@ -51,9 +51,13 @@ ADC | ADC1115 |![adc1115](https://user-images.githubusercontent.com/61006702/772
 
 Sensor | KTY81 |![KTY81](https://user-images.githubusercontent.com/61006702/77226101-fab91280-6b75-11ea-9794-d01e3e729a7c.jpg)
 
+---
+
 ## schematic
+---
 ![schema motoalarm](https://user-images.githubusercontent.com/61006702/77251212-69b56a80-6c4d-11ea-93f9-a59be5d3f1ce.png)
 
+---
 
 # Code
 ```c++
@@ -84,13 +88,15 @@ Sensor | KTY81 |![KTY81](https://user-images.githubusercontent.com/61006702/7722
 
 //Alarm
 #include "EasyBuzzer.h"
+unsigned int frequency = 1000;
+unsigned int duration = 1000;
 
 //map
 WidgetMap myMap(V3);
 
 //**********************************************NETWORK*******************************************
 
-char auth[] = "$$$$"; // Fill in your personal Blync code.
+char auth[] = "Jx-OJlhEJwCTkevLqW8uQ3ywjO05dA3V"; // Fill in your personal Blync code.
 
 ///////please enter your sensitive data in the Secret tab/arduino_secrets.h
 char ssid[] = SECRET_SSID;        // your network SSID (name)
@@ -100,7 +106,7 @@ int keyIndex = 0;                 // your network key Index number (needed only 
 //************************************************************************************************
 //pinMode
 int system_status = 2;
-int sirene = 4;
+int sirene = 14;
 int LimitationFlag = 0;
 int MotionOnFlag;
 
@@ -209,21 +215,35 @@ void loop() {
 BLYNK_WRITE(V0)                                    // Virtual pin to control the system.
 {
   MotionOnFlag = param.asInt();
-  int pinValue = param.asInt();                    // assigning incoming value from pin V5 to a variable
+  int pinValue = param.asInt();                    // assigning incoming value from pin V0 to a variable
   if (param.asInt()) {
     Serial.println("Security system is ON ");
     digitalWrite(system_status, HIGH); 
-    }else { 
+ }else { 
     Serial.println("Security system is OFF ");
     Blynk.virtualWrite(V14, "Bike alarm OFF");
     digitalWrite(system_status, LOW);
     digitalWrite(sirene, LOW);
+    EasyBuzzer.stopBeep();
     }
 }
 
+BLYNK_WRITE(V7)                                    // Virtual pin to control the system.
+{
+  int pinValue2 = param.asInt();                    // assigning incoming value from pin V0 to a variable
+     if (param.asInt()) {
+      EasyBuzzer.singleBeep(
+      frequency,  // Frequency in hertz(HZ).
+      duration  // Duration of the beep in milliseconds(ms).
+      );
+    }else {
+    EasyBuzzer.stopBeep();
+    }
+  }
 void LimitationFlagReset() {
   LimitationFlag = 0;                              // Reset limitation flag
 }
+
 
 void MotionSensorRead() { 
  
@@ -236,10 +256,15 @@ void MotionSensorRead() {
     if (a.acceleration.x > maxval || a.acceleration.x < minval && a.acceleration.y > maxval || a.acceleration.y  < minval) {
       Blynk.virtualWrite(V14, "Bike Movement Detected");
       Blynk.notify("BIKE BEING STOLEN!");
-      digitalWrite(sirene, HIGH);
+      EasyBuzzer.singleBeep(
+      frequency,  // Frequency in hertz(HZ).
+      duration  // Duration of the beep in milliseconds(ms).
+      );
+      EasyBuzzer.stopBeep();
     }  else {
       Blynk.virtualWrite(V14, "Bike Secure");
       digitalWrite(sirene, LOW);
+      EasyBuzzer.stopBeep();
     }
   }
 }
@@ -327,6 +352,7 @@ void OledDisplay(){
     Serial.println();
     delay(200);
 }
+
 ```
 
 
