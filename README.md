@@ -1,6 +1,7 @@
 # Motorcicle-monitoring-alarm-system
 ![download](https://user-images.githubusercontent.com/61006702/77225272-eec95280-6b6d-11ea-8473-87b95f04ba34.jpg)
 
+---
 ## Warning 
 --- 
 This project is made with an esp32 with ONLY a WiFi connection, if you want to use this project on a location where is no WiFi than you need a esp32 with 2G connection. (TTGO T-Call ESP32 SIM800L)
@@ -8,6 +9,7 @@ You will need to follow the instuctions (https://randomnerdtutorials.com/esp32-s
 
 ![ESP32-SIM800L-TTGO-T-Call-GPS-GPRS-f](https://user-images.githubusercontent.com/61006702/77245293-c4cf6900-6c1d-11ea-956c-971cef7f680f.jpg)
 
+---
 
 ## description
 ### -MONITORING-
