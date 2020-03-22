@@ -51,6 +51,9 @@ ADC | ADC1115 |![adc1115](https://user-images.githubusercontent.com/61006702/772
 
 Sensor | KTY81 |![KTY81](https://user-images.githubusercontent.com/61006702/77226101-fab91280-6b75-11ea-9794-d01e3e729a7c.jpg)
 
+## schematic
+![schema motoalarm](https://user-images.githubusercontent.com/61006702/77251212-69b56a80-6c4d-11ea-93f9-a59be5d3f1ce.png)
+
 
 # Code
 ```c++
