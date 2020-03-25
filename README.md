@@ -65,12 +65,13 @@ Sensor | KTY81 |![KTY81](https://user-images.githubusercontent.com/61006702/7722
 ---
 ## Blynk app layout
 
-The bike Alarm page where you can monitor the bike status and see on a mep where the bike is.
+The Alarm control page is where you can monitor the bike status and see on a mep where the bike is.
 On this page you can also control the alarm and the siren with one press on your screen.
 
 ![Screenshot_20200325-122040_Blynk](https://user-images.githubusercontent.com/61006702/77532093-77a8fc80-6e94-11ea-83f1-1e8fd6490aac.jpg)
 
-On the second tab ( Monitoring temperature & humidity) you can see the temperature, pressure, acceleration and gyro in a graph.
+## On the second tab ( Monitoring temperature & humidity),
+you can see the temperature, pressure, acceleration and gyro in a graph.
 The temperatures and the status of the motor can also be seen on the OLED display.
 
 ![Screenshot_20200325-121942_Blynk](https://user-images.githubusercontent.com/61006702/77531943-1b45dd00-6e94-11ea-9435-631db3795387.jpg)
