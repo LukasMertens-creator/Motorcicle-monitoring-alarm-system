@@ -62,6 +62,22 @@ Sensor | KTY81 |![KTY81](https://user-images.githubusercontent.com/61006702/7722
 
 ![20200322_154613](https://user-images.githubusercontent.com/61006702/77252532-aa64b200-6c54-11ea-9f73-1e9f690c8f86.jpg)
 
+---
+## Blynk app layout
+
+The bike Alarm page where you can monitor the bike status and see on a mep where the bike is.
+On this page you can also control the alarm and the siren with one press on your screen.
+
+![Screenshot_20200325-122040_Blynk](https://user-images.githubusercontent.com/61006702/77532093-77a8fc80-6e94-11ea-83f1-1e8fd6490aac.jpg)
+
+On the second tab ( Monitoring temperature & humidity) you can see the temperature, pressure, acceleration and gyro in a graph.
+The temperatures and the status of the motor can also be seen on the OLED display.
+
+![Screenshot_20200325-121942_Blynk](https://user-images.githubusercontent.com/61006702/77531943-1b45dd00-6e94-11ea-9435-631db3795387.jpg)
+
+When detection is complete, the siren sounds and you receive a notification.
+
+![Screenshot_20200325-122004_Blynk](https://user-images.githubusercontent.com/61006702/77532730-c3a87100-6e95-11ea-82f1-0079fce6b0a4.jpg)
 
 ---
 
@@ -79,8 +95,10 @@ Sensor | KTY81 |![KTY81](https://user-images.githubusercontent.com/61006702/7722
 //Gyro MPU6050
 #include <Adafruit_Sensor.h>
 #include <Adafruit_MPU6050.h>
-#define maxval 2
-#define minval -2
+#define maxval 0.5
+#define minval -0.5
+#define maxval1 0.2
+#define minval1 -0.2
 
 //Oled display
 #include <Adafruit_GFX.h>
@@ -95,7 +113,7 @@ Sensor | KTY81 |![KTY81](https://user-images.githubusercontent.com/61006702/7722
 //Alarm
 #include "EasyBuzzer.h"
 unsigned int frequency = 1000;
-unsigned int duration = 1000;
+unsigned int beeps = 10;
 
 //map
 WidgetMap myMap(V3);
@@ -112,7 +130,7 @@ int keyIndex = 0;                 // your network key Index number (needed only 
 //************************************************************************************************
 //pinMode
 int system_status = 2;
-int sirene = 14;
+int sirene = 4;
 int LimitationFlag = 0;
 int MotionOnFlag;
 
@@ -238,10 +256,10 @@ BLYNK_WRITE(V7)                                    // Virtual pin to control the
 {
   int pinValue2 = param.asInt();                    // assigning incoming value from pin V0 to a variable
      if (param.asInt()) {
-      EasyBuzzer.singleBeep(
-      frequency,  // Frequency in hertz(HZ).
-      duration  // Duration of the beep in milliseconds(ms).
-      );
+       EasyBuzzer.beep(
+       frequency,  // Frequency in Hertz(HZ).
+       beeps // The number of beeps.
+       );
     }else {
     EasyBuzzer.stopBeep();
     }
@@ -255,19 +273,23 @@ void MotionSensorRead() {
  
   sensors_event_t a, g, temp;
   mpu.getEvent(&a, &g, &temp);
-      
+  Blynk.virtualWrite(V8, a.acceleration.x);
+  Blynk.virtualWrite(V9, a.acceleration.y);
+  Blynk.virtualWrite(V10, a.acceleration.z);
+  Blynk.virtualWrite(V11, g.gyro.x);
+  Blynk.virtualWrite(V12, g.gyro.y);
+  Blynk.virtualWrite(V13, g.gyro.z);
   if (MotionOnFlag == 1 && LimitationFlag == 0) {  // Check if both ON and that limit flag is inactive
     LimitationFlag = 1; // Set time limit flag for notifications
     timer.setTimeout(5000L, LimitationFlagReset);  // Start 5 second timer for limiting flag reset = sirene time on
-    if (a.acceleration.x > maxval || a.acceleration.x < minval && a.acceleration.y > maxval || a.acceleration.y  < minval) {
+    if (a.acceleration.x > maxval || a.acceleration.x < minval && a.acceleration.y > maxval || a.acceleration.y  < minval || g.gyro.x > maxval1 || g.gyro.x  < minval1 || g.gyro.y > maxval1 || g.gyro.y  < minval1) {
       Blynk.virtualWrite(V14, "Bike Movement Detected");
       Blynk.notify("BIKE BEING STOLEN!");
-      EasyBuzzer.singleBeep(
-      frequency,  // Frequency in hertz(HZ).
-      duration  // Duration of the beep in milliseconds(ms).
-      );
-      EasyBuzzer.stopBeep();
-    }  else {
+      EasyBuzzer.beep(
+      frequency,  // Frequency in Hertz(HZ).
+      beeps   // The number of beeps.
+          );
+   }  else {
       Blynk.virtualWrite(V14, "Bike Secure");
       digitalWrite(sirene, LOW);
       EasyBuzzer.stopBeep();
@@ -329,19 +351,19 @@ void OledDisplay(){
   display.println(temp1);
   Blynk.virtualWrite(V3, temp1);
 
-  if (temp1 > 22 && temp1 < 24){
+  if (temp1 > 22 && temp1 < 23){
     Blynk.virtualWrite(V6, "Bike motor is warming up");
     display.setTextSize(1);
     display.setTextColor(WHITE);
     display.setCursor(0, 10);
     display.println("Motor is warming up");
-  } else if (temp1 > 24 && temp1 < 28){
+  } else if (temp1 > 23 && temp1 < 24){
     Blynk.virtualWrite(V6, "ready to race");
     display.setTextSize(1);
     display.setTextColor(WHITE);
     display.setCursor(0, 10);
     display.println("ready to race");
-  } else if (temp1 > 28){
+  } else if (temp1 > 24){
     Blynk.virtualWrite(V6, "Motor overheating");
     display.setTextSize(1);
     display.setTextColor(WHITE);
@@ -358,7 +380,6 @@ void OledDisplay(){
     Serial.println();
     delay(200);
 }
-
 ```
 
 
