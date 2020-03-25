@@ -63,7 +63,7 @@ This precision sensor from Bosch is the best low-cost sensing solution for measu
 
 Pin | ESP32 
 ------|------
-Vin	| 3.3V
+Vcc	| 3.3V
 GND	| GND
 SCL	| GPIO 22
 SDA	| GPIO 21
@@ -78,7 +78,7 @@ The MPU-6050 is not expensive, especially given the fact that it combines both a
 
 Pin | ESP32 
 ------|------
-Vin	| 3.3V
+Vcc	| 3.3V
 GND	| GND
 SCL	| GPIO 22
 SDA	| GPIO 21
@@ -91,11 +91,11 @@ The ADS1115 is a 16 bit Analog Digital Converter that can greatly improve your A
 
 Pin | ESP32 
 ------|------
-Vin	| 3.3V
+VDD	| 3.3V
 GND	| GND
 SCL	| GPIO 22
 SDA	| GPIO 21
-ADRR | GND
+ADDR | GND
 
 ---
 
