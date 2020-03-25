@@ -33,8 +33,8 @@ Adafruit-MPU6050 | Adafruit_MPU6050.h | https://github.com/adafruit/Adafruit_MPU
 Blynk | BlynkSimpleEsp32.h | https://github.com/blynkkk/blynk-library/blob/master/src/BlynkSimpleEsp32.h
 Wifi | WiFi.h | https://github.com/arduino-libraries/WiFi
 WifiClient | WiFiClient.h | https://github.com/esp8266/Arduino/blob/master/libraries/ESP8266WiFi/src/WiFiClient.h
-Wire | Wire.h | https://github.com/esp8266/Arduino 
-SPI | SPI.h | https://github.com/esp8266/Arduino 
+Wire | Wire.h | https://github.com/esp8266/Arduino/tree/master/libraries/Wire
+SPI | SPI.h | https://github.com/esp8266/Arduino/tree/master/libraries/SPI 
 EasyBuzzer | EasyBuzzer.h | https://github.com/evert-arias/EasyBuzzer
 
 ## Components
