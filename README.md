@@ -63,6 +63,20 @@ Sensor | KTY81 |![KTY81](https://user-images.githubusercontent.com/61006702/7722
 ![20200322_154613](https://user-images.githubusercontent.com/61006702/77252532-aa64b200-6c54-11ea-9f73-1e9f690c8f86.jpg)
 
 ---
+## 3Dprinted case and Oled barholder
+For this project I designed a case for the esp32, sensors, the siren circuit and for the OLED display a holder that can be mounted to the steering bar.
+![bike alarm case](https://user-images.githubusercontent.com/61006702/77534196-7e397300-6e98-11ea-94be-a49eefc58169.png)
+
+If you have 3D printed this design it looks like that.
+
+![20200325_131056](https://user-images.githubusercontent.com/61006702/77535283-a9bd5d00-6e9a-11ea-9ac7-4715f0cc03a5.jpg)
+
+### The red LED indicates that the esp32 has voltage. The blue LED indicates that the Alarm is active
+
+![20200325_131134](https://user-images.githubusercontent.com/61006702/77535532-0587e600-6e9b-11ea-98bb-08fa405e3e34.jpg)
+
+
+---
 ## Blynk app layout
 
 The Alarm control page is where you can monitor the bike status and see on a mep where the bike is.
@@ -70,7 +84,7 @@ On this page you can also control the alarm and the siren with one press on your
 
 ![Screenshot_20200325-122040_Blynk](https://user-images.githubusercontent.com/61006702/77532093-77a8fc80-6e94-11ea-83f1-1e8fd6490aac.jpg)
 
-## On the second tab ( Monitoring temperature & humidity),
+### On the second tab ( Monitoring temperature & humidity),
 you can see the temperature, pressure, acceleration and gyro in a graph.
 The temperatures and the status of the motor can also be seen on the OLED display.
 
