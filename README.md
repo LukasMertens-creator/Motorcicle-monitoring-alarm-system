@@ -102,11 +102,23 @@ ADDR | GND
 Sensor | KTY81 |![KTY81](https://user-images.githubusercontent.com/61006702/77226101-fab91280-6b75-11ea-9794-d01e3e729a7c.jpg)
 
 ---
+### And other small components:
+
+pcs. | component 
+------|------
+1 | elco 220uF
+2 | elco 10uF
+2 | capacitor 0.1uF
+1 | potentiometer 10K
+1 | resistor 10 Ohm
+1 | resistor 1K Ohm
+1 | resistor 1K2 Ohm
 
 ## schematic
 
 ![schema motoalarm](https://user-images.githubusercontent.com/61006702/77251212-69b56a80-6c4d-11ea-93f9-a59be5d3f1ce.png)
 
+### For the LM386 integrated power amplifier is a voltage of 9-12VDC necessary.
 ---
 ## Breadboard photo
 
