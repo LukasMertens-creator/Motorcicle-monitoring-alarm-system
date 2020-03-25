@@ -41,13 +41,63 @@ EasyBuzzer | EasyBuzzer.h | https://github.com/evert-arias/EasyBuzzer
 
 Microcontroller | esp32 |![esp](https://user-images.githubusercontent.com/61006702/77225982-b6794280-6b74-11ea-89eb-ba2c3c65d996.jpg)
 
+ESP32 is a series of low-cost, low-power system on a chip microcontrollers with integrated Wi-Fi and dual-mode Bluetooth. The ESP32 series employs a Tensilica Xtensa LX6 microprocessor in both dual-core and single-core variations and includes built-in antenna switches, RF balun, power amplifier, low-noise receive amplifier, filters, and power-management modules. ESP32 is created and developed by Espressif Systems, a Shanghai-based Chinese company, and is manufactured by TSMC using their 40 nm process.[2] It is a successor to the ESP8266 microcontroller.
+
+---
 Display | Oled | ![oled](https://user-images.githubusercontent.com/61006702/77226007-e6c0e100-6b74-11ea-9dff-47438e23a81a.jpg)
+
+Because the OLED display uses I2C communication protocol, wiring is very simple. You can use the following table as a reference.
+
+Pin | ESP32 
+------|------
+Vin	| 3.3V
+GND	| GND
+SCL	| GPIO 22
+SDA	| GPIO 21
+
+---
 
 Sensor | BMP280 | ![bmp280](https://user-images.githubusercontent.com/61006702/77226020-225bab00-6b75-11ea-9e40-b6a22e855fad.jpg)
 
+This precision sensor from Bosch is the best low-cost sensing solution for measuring barometric pressure and temperature. Because pressure changes with altitude you can also use it as an altimeter!
+
+Pin | ESP32 
+------|------
+Vin	| 3.3V
+GND	| GND
+SCL	| GPIO 22
+SDA	| GPIO 21
+
+---
+
 Sensor | MPU6050 | ![mpu6050](https://user-images.githubusercontent.com/61006702/77226033-461ef100-6b75-11ea-9bd4-dd8045d6a0cc.jpg)
 
+The InvenSense MPU-6050 sensor contains a MEMS accelerometer and a MEMS gyro in a single chip. It is very accurate, as it contains 16-bits analog to digital conversion hardware for each channel. Therefor it captures the x, y, and z channel at the same time. The sensor uses the I2C-bus to interface with the Arduino.
+
+The MPU-6050 is not expensive, especially given the fact that it combines both an accelerometer and a gyro.
+
+Pin | ESP32 
+------|------
+Vin	| 3.3V
+GND	| GND
+SCL	| GPIO 22
+SDA	| GPIO 21
+
+---
+
 ADC | ADC1115 |![adc1115](https://user-images.githubusercontent.com/61006702/77226066-a57d0100-6b75-11ea-89c8-86cf84a6cb76.jpg)
+
+The ADS1115 is a 16 bit Analog Digital Converter that can greatly improve your Arduino resolution and measurement accuracy.   It has four input channels that can be configured for Single Ended, Differential or Comparator Measurements.
+
+Pin | ESP32 
+------|------
+Vin	| 3.3V
+GND	| GND
+SCL	| GPIO 22
+SDA	| GPIO 21
+ADRR | GND
+
+---
 
 Sensor | KTY81 |![KTY81](https://user-images.githubusercontent.com/61006702/77226101-fab91280-6b75-11ea-9794-d01e3e729a7c.jpg)
 
