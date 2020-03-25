@@ -144,17 +144,17 @@ If you have 3D printed this design it looks like that.
 The Alarm control page is where you can monitor the bike status and see on a mep where the bike is.
 On this page you can also control the alarm and the siren with one press on your screen.
 
-![Screenshot_20200325-122040_Blynk](https://user-images.githubusercontent.com/61006702/77532093-77a8fc80-6e94-11ea-83f1-1e8fd6490aac.jpg)
+![Screenshot_20200325-151618_Blynk](https://user-images.githubusercontent.com/61006702/77546392-1c830400-6eac-11ea-9c95-d62e9e3969cd.jpg)
 
-### On the second tab ( Monitoring temperature & humidity),
+### On the second tab ( Monitoring temperature & pressure),
 you can see the temperature, pressure, acceleration and gyro in a graph.
 The temperatures and the status of the motor can also be seen on the OLED display.
 
-![Screenshot_20200325-121942_Blynk](https://user-images.githubusercontent.com/61006702/77531943-1b45dd00-6e94-11ea-9435-631db3795387.jpg)
+![Screenshot_20200325-151627_Blynk](https://user-images.githubusercontent.com/61006702/77546413-23117b80-6eac-11ea-9161-e938840eaa53.jpg)
 
-When detection is complete, the siren sounds and you receive a notification.
+When detection, the siren sounds and you receive a notification.
 
-![Screenshot_20200325-122004_Blynk](https://user-images.githubusercontent.com/61006702/77532730-c3a87100-6e95-11ea-82f1-0079fce6b0a4.jpg)
+![Screenshot_20200325-151655_Blynk](https://user-images.githubusercontent.com/61006702/77546437-2c024d00-6eac-11ea-9392-3a960fbee2f4.jpg)
 
 ---
 
