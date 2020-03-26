@@ -113,6 +113,7 @@ pcs. | component
 1 | resistor 10 Ohm
 1 | resistor 1K Ohm
 1 | resistor 1K2 Ohm
+1 | piezo speaker
 
 ## schematic
 
@@ -207,7 +208,7 @@ int keyIndex = 0;                 // your network key Index number (needed only 
 //************************************************************************************************
 //pinMode
 int system_status = 2;
-int sirene = 4;
+int sirene = 14;
 int LimitationFlag = 0;
 int MotionOnFlag;
 
